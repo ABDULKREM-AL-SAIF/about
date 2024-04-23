@@ -1,0 +1,166 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	letter-spacing: 0.5px;
+	line-height: 30px;
+	font-family: 'Tajawal';
+	direction: rtl;
+	word-wrap: break-word;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+body {
+    background-color: #A6A6A6;
+}
+#rightSide {
+    position: fixed;
+    float: right;
+    height: 100%;
+    width: 60px;
+    top: 0;
+    right: 0;
+    background-color: #404040;
+    overflow-x: hidden;
+}
+#profileImage {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+}
+#profileImage img {
+    width: 40px;
+    border-radius: 10px;
+}
+#developmentPart {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+}
+#developmentPart button {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    border: 0px;
+    background-color: #404040;
+}
+#developmentPart button:hover {
+    background-color: #737373;
+}
+#developmentPart img {
+    width: 50px;
+    height: 50px;
+}
+#certificatePart button {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    border: 0px;
+    background-color: #404040;
+}
+#certificatePart button:hover {
+    background-color: #737373;
+}
+#certificatePart img {
+    width: 50px;
+    height: 50px;
+}
+#leftSide {
+    float: right;
+    margin-right: 60px;
+    padding: 30px;
+}
+#information {
+    width: 100%;
+    height: 250px;
+}
+#information h1 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.largParagraph {
+    width: 100%;
+    height: 150px;
+    font-weight: bold;
+}
+#programmingLanguage {
+    width: 100%;
+    height: 300px;
+}
+#programmingLanguage h1 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+#programmingLanguage ul {
+    width: 100%;
+    min-height: 250px;
+    float: right;
+}
+.cardList {
+    width: 200px;
+    float: right;
+    list-style: none;
+    background-color: azure;
+    margin-left: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+.cardList img {
+    display: block;
+    width: 100px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cardList p {
+    display: block;
+    width: 200px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#webFramework {
+    width: 100%;
+    height: 300px;
+}
+#webFramework h1 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+#DesktopFramework {
+    width: 100%;
+    height: 300px;
+}
+#DesktopFramework h1 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+#webLanguage {
+    width: 100%;
+    height: 300px;
+}
+#webLanguage h1 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+#passingData {
+    width: 100%;
+    height: 300px;
+}
+#passingData h1 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}

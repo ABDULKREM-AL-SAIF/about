@@ -7,25 +7,114 @@
     
     <title> عبدالكريم السيف </title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Tajawal&amp;display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="container">
-        <div id="rightSide">
-            <div id="profileImage">
-                <img src="profile.jpg" alt="Profile Image" />
-            </div>
-            <div id="developmentPart">
-                <img src="development.svg" alt="Development Icon" />
-            </div>
-            <div id="certificatePart">
-                <img src="certificate.svg" alt="Certificate Icon" />
-            </div>
+    <div id="rightSide">
+        <div id="profileImage">
+            <img src="image/profile.jpg" alt="Profile Image" />
         </div>
-        <div id="leftSide">
-            <h1> عبدالكريم السيف </h1>
+        <div id="developmentPart">
+            <button onClick="programmingPart()">
+                <img src="image/development.svg" alt="Development Icon" />
+            </button>
+        </div>
+        <div id="certificatePart">
+            <button>
+                <img src="image/certificate.svg" alt="Certificate Icon" />
+            </button>
         </div>
     </div>
+    <div id="leftSide">
+        <section id="information">
+            <h1> عبدالكريم السيف </h1>
+            <p class="largParagraph"> شخص يطور برامج </p>
+        </section>
+        <section id="programmingLanguage">
+            <h1> لغات البرمجة </h1>
+            <ul>
+                <li class="cardList">
+                    <img src="image/java.svg" alt="Java Icon" />
+                    <p> Java </p>
+                </li>
+                <li class="cardList"> 
+                    <img src="image/csharp.svg" alt="C# Icon" />
+                    <p> #C </p>
+                </li>
+                <li class="cardList"> 
+                    <img src="image/python.svg" alt="Python Icon" />
+                    <p> Python </p>
+                </li>
+                <li class="cardList"> 
+                    <img src="image/ruby.svg" alt="Ruby Icon" />
+                    <p> Ruby </p>
+                </li>
+            </ul>
+        </section>
+        <section id="webFramework">
+            <h1> أطر العمل لإلنشاء مواقع الإنترنت </h1>
+            <ul>
+                <li class="cardList">
+                    <img src="image/flask.svg" alt="Flask Icon" />
+                    <p> Flask </p>
+                </li>
+                <li class="cardList"> 
+                    <img src="image/django.svg" alt="Django Icon" />
+                    <p> Django </p>
+                </li>
+                <li class="cardList"> 
+                    <img src="image/sinatra.svg" alt="Sinatra Icon" />
+                    <p> Sinatra </p>
+                </li>
+            </ul>
+        </section>
+        <section id="DesktopFramework">
+            <h1> أطر العمل لإلنشاء برامج الحاسب </h1>
+            <ul>
+                <li class="cardList">
+                    <img src="image/java.svg" alt="Java Icon" />
+                    <p> Javafx </p>
+                </li>
+            </ul>
+        </section>
+        <section id="webLanguage">
+            <h1> اللغات الخاصة بتطوير صفحات الإنترنت </h1>
+            <ul>
+                <li class="cardList">
+                    <img src="image/html5.svg" alt="Html Icon" />
+                    <p> Html </p>
+                </li>
+                <li class="cardList">
+                    <img src="image/css3.svg" alt="Css Icon" />
+                    <p> Css </p>
+                </li>
+                <li class="cardList">
+                    <img src="image/javascript.svg" alt="Javascript Icon" />
+                    <p> Javascript </p>
+                </li>
+            </ul>
+        </section>
+        <section id="webLanguage">
+            <h1> اللغات الخاصة للتعامل مع قواعد البيانات </h1>
+            <ul>
+                <li class="cardList">
+                    <img src="image/sql.svg" alt="Sql Icon" />
+                    <p> Sql </p>
+                </li>
+            </ul>
+        </section>
+        <section id="passingData">
+            <h1> اللغات الخاصة للتعامل مع قواعد البيانات </h1>
+            <ul>
+                <li class="cardList">
+                    <img src="image/json.svg" alt="Json Icon" />
+                    <p> Json </p>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="js/move.js"></script>
 </body>
 </html>
