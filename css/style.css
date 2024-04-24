@@ -164,3 +164,24 @@ body {
     min-height: 40px;
     margin-bottom: 20px;
 }
+#Satr {
+    max-width: 350px;
+    min-height: 50px;
+    background-color: azure;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 100px;
+}
+#Satr img {
+    float: right;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+#Satr span {
+    display: block;
+    height: 20px;
+    max-width: 310px;
+    margin-top: 5px;
+}
