@@ -42,7 +42,7 @@
 }
 #developmentPart button {
     width: 100%;
-    height: 50px;
+    height: 60px;
     cursor: pointer;
     border: 0px;
     background-color: #3D3D3D;
@@ -51,12 +51,13 @@
     background-color: #737373;
 }
 #developmentPart img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    padding: 15px;
 }
 #certificatePart button {
     width: 100%;
-    height: 50px;
+    height: 60px;
     cursor: pointer;
     border: 0px;
     background-color: #3D3D3D;
@@ -65,8 +66,9 @@
     background-color: #737373;
 }
 #certificatePart img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    padding: 15px;
 }
 #leftSide {
     float: right;
@@ -90,48 +92,51 @@
 }
 #programmingLanguage {
     width: 100%;
-    min-height: 300px;
 }
 #programmingLanguage h1 {
     width: 100%;
     min-height: 40px;
     margin-bottom: 20px;
 }
-#programmingLanguage ul {
-    width: 100%;
-    min-height: 250px;
+#leftSide ul {
     float: right;
+    width: 100%;
+    margin-bottom: 25px;
 }
 .cardList {
-    width: 200px;
-    float: right;
+    display: inline-block;
+    width: 250px;
+    height: 50px;
     list-style: none;
-    border: 2px solid #3D3D3D;
     margin-left: 10px;
     margin-bottom: 25px;
     text-align: center;
-    border-radius: 5px;
 }
 .cardList img {
-    display: block;
-    width: 100px;
-    height: 150px;
-    margin-left: auto;
-    margin-right: auto;
+    float: right;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-right: 2px solid #3D3D3D;
+    border-bottom: 2px solid #3D3D3D;
+    border-top: 2px solid #3D3D3D;
+    border-radius: 0px 5px 5px 0px;
 }
-.cardList p {
-    display: block;
-    width: 197px;
+.cardList button {
+    float: left;
+    width: 200px;
+    height: 50px;
     font-weight: bold;
     text-transform: uppercase;
     color: #FFFFFF;
     background-color: #3D3D3D;
+    border: 0px;
+    border-radius: 5px 0px 0px 5px;
     font-size: x-large;
     letter-spacing: 2px;
 }
 #webFramework {
     width: 100%;
-    min-height: 300px;
 }
 #webFramework h1 {
     width: 100%;
@@ -140,7 +145,6 @@
 }
 #DesktopFramework {
     width: 100%;
-    min-height: 300px;
 }
 #DesktopFramework h1 {
     width: 100%;
@@ -149,7 +153,6 @@
 }
 #webLanguage {
     width: 100%;
-    min-height: 300px;
 }
 #webLanguage h1 {
     width: 100%;
@@ -158,7 +161,6 @@
 }
 #passingData {
     width: 100%;
-    min-height: 300px;
 }
 #passingData h1 {
     width: 100%;
@@ -166,27 +168,34 @@
     margin-bottom: 20px;
 }
 #Satr {
-    max-width: 350px;
-    min-height: 50px;
-    background-color: rgb(101, 243, 243);
+    display: inline-block;
+    width: 250px;
+    height: 50px;
     border: 0px;
-    border-radius: 5px;
     cursor: pointer;
-    margin-top: 100px;
-}
-#Satr:hover {
-    background-color: rgb(163, 248, 248);
+    margin-top: 50px;
+    text-align: center;
+    background-color: #FFFFFF;
 }
 #Satr img {
     float: right;
-    height: 40px;
-    width: 40px;
-    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-right: 2px solid #737373;
+    border-bottom: 2px solid #737373;
+    border-top: 2px solid #737373;
+    border-radius: 0px 5px 5px 0px;
 }
 #Satr span {
-    display: block;
-    height: 20px;
-    max-width: 310px;
-    margin-top: 5px;
+    float: left;
+    width: 200px;
+    height: 50px;
     font-weight: bold;
+    color: #FFFFFF;
+    background-color: #737373;
+    border: 0px;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 11px;
+    padding: 10px;
 }
