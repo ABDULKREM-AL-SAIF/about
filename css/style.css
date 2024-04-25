@@ -33,39 +33,24 @@
     height: 54px;
     border-radius: 10px;
 }
-#developmentPart {
+#developmentPart, #certificatePart {
     display: block;
     text-align: center;
     width: 100%;
     height: 60px;
     cursor: pointer;
 }
-#developmentPart button {
+#developmentPart button, #certificatePart button {
     width: 100%;
     height: 60px;
     cursor: pointer;
     border: 0px;
     background-color: #3D3D3D;
 }
-#developmentPart button:hover {
+#developmentPart button:hover, #certificatePart button:hover {
     background-color: #737373;
 }
-#developmentPart img {
-    width: 60px;
-    height: 60px;
-    padding: 15px;
-}
-#certificatePart button {
-    width: 100%;
-    height: 60px;
-    cursor: pointer;
-    border: 0px;
-    background-color: #3D3D3D;
-}
-#certificatePart button:hover {
-    background-color: #737373;
-}
-#certificatePart img {
+#developmentPart img, #certificatePart img {
     width: 60px;
     height: 60px;
     padding: 15px;
@@ -73,7 +58,7 @@
 #leftSide {
     float: right;
     display: grid;
-    margin-right: 60px;
+    margin-right: 50px;
     padding: 30px;
 }
 #information {
@@ -85,15 +70,15 @@
     min-height: 40px;
     margin-bottom: 20px;
 }
-.largParagraph {
+.largeParagraph {
     width: 100%;
     height: 150px;
     font-weight: bold;
 }
-#programmingLanguage {
+#programmingLanguage, #webFramework, #DesktopFramework, #webLanguage, #passingData {
     width: 100%;
 }
-#programmingLanguage h1 {
+#programmingLanguage h1, #webFramework h1, #DesktopFramework h1, #webLanguage h1, #passingData h1 {
     width: 100%;
     min-height: 40px;
     margin-bottom: 20px;
@@ -105,7 +90,7 @@
 }
 .cardList {
     display: inline-block;
-    width: 250px;
+    width: 300px;
     height: 50px;
     list-style: none;
     margin-left: 10px;
@@ -124,7 +109,7 @@
 }
 .cardList button {
     float: left;
-    width: 200px;
+    width: 250px;
     height: 50px;
     font-weight: bold;
     text-transform: uppercase;
@@ -135,41 +120,9 @@
     font-size: x-large;
     letter-spacing: 2px;
 }
-#webFramework {
-    width: 100%;
-}
-#webFramework h1 {
-    width: 100%;
-    min-height: 40px;
-    margin-bottom: 20px;
-}
-#DesktopFramework {
-    width: 100%;
-}
-#DesktopFramework h1 {
-    width: 100%;
-    min-height: 40px;
-    margin-bottom: 20px;
-}
-#webLanguage {
-    width: 100%;
-}
-#webLanguage h1 {
-    width: 100%;
-    min-height: 40px;
-    margin-bottom: 20px;
-}
-#passingData {
-    width: 100%;
-}
-#passingData h1 {
-    width: 100%;
-    min-height: 40px;
-    margin-bottom: 20px;
-}
 #Satr {
     display: inline-block;
-    width: 250px;
+    width: 300px;
     height: 50px;
     border: 0px;
     cursor: pointer;
@@ -189,13 +142,13 @@
 }
 #Satr span {
     float: left;
-    width: 200px;
+    width: 250px;
     height: 50px;
     font-weight: bold;
     color: #FFFFFF;
     background-color: #737373;
     border: 0px;
     border-radius: 5px 0px 0px 5px;
-    font-size: 11px;
+    font-size: 14px;
     padding: 10px;
 }
