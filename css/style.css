@@ -2,9 +2,8 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
-	letter-spacing: 0.5px;
 	line-height: 30px;
-	font-family: 'Tajawal';
+	font-family: monospace;
 	direction: rtl;
 }
 ::-webkit-scrollbar {
@@ -31,6 +30,7 @@
 }
 #profileImage img {
     width: 40px;
+    height: 54px;
     border-radius: 10px;
 }
 #developmentPart {
@@ -126,6 +126,8 @@
     text-transform: uppercase;
     color: #FFFFFF;
     background-color: #3D3D3D;
+    font-size: x-large;
+    letter-spacing: 2px;
 }
 #webFramework {
     width: 100%;
