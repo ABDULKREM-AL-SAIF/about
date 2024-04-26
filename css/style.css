@@ -88,6 +88,9 @@
     width: 100%;
     margin-bottom: 25px;
 }
+.pointer {
+    cursor: pointer;
+}
 .cardList {
     display: inline-block;
     width: 300px;
