@@ -3,136 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="keywords" content=" السيرة الذاتية لعبدالكريم السيف ">
     <meta name="description" content=" السيرة الذاتية لعبدالكريم السيف ">
     <meta name="author" content=" عبدالكريم السيف ">
-    
     <meta property="og:title" content=" عبدالكريم السيف ">
     <meta property="og:keywords" content=" السيرة الذاتية لعبدالكريم السيف ">
     <meta property="og:description" content=" السيرة الذاتية لعبدالكريم السيف ">
     <meta property="og:author" content=" عبدالكريم السيف ">
-
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://abdulkrem-al-saif.github.io/about/">
     <meta property="og:site_name" content=" عبدالكريم السيف ">
-
     <meta name="google-site-verification" content="v1A75ZOBeOyFvLW8F7spsgiNmiUc-XIqZMSVWbylVfY">
-    
     <title> عبدالكريم السيف </title>
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="rightSide">
-        <div id="profileImage">
-            <img src="image/profile.jpg" alt="Profile Image">
+    <div id="container">
+        <div id="InformationPart">
+            <div id="ProfileImage">
+                <img src="image/photo.jpg" alt="Profile Image">
+            </div>
+            <div id="ProfileInformation">
+                عبدالكريم السيف  
+                <br>
+                مطور برامج مبتدأ 
+                <br>
+                متخرج من جامعة حائل سنة 2021 
+                <br>
+                متخصص في علوم الحاسب 
+                <br><br>
+                <button id="Satr" onclick="goToSatr()">
+                    <img src="image/satr.png" alt="Satr Logo">
+                    <span> الصفحة الشخصية على موقع سطر </span>
+                </button>
+            </div>
         </div>
-        <div id="developmentPart">
-            <button onClick="programmingPart()">
-                <img src="image/code.png" alt="Development Icon">
-            </button>
-        </div>
-        <div id="certificatePart">
-            <button>
-                <img src="image/certificate.png" alt="Certificate Icon">
-            </button>
+        <div id="ProgrammingLanguagePart">
+            <section id="programmingLanguage">
+                <h1> لغات البرمجة </h1>
+                <ul>
+                    <li class="cardList pointer" onclick="java()">
+                        <img src="image/java.png" alt="Java Icon">
+                        <button class="pointer"> Java </button>
+                    </li>
+                    <li class="cardList pointer" onclick="c_sharp()"> 
+                        <img src="image/csharp.png" alt="C# Icon">
+                        <button class="pointer"> #C </button>
+                    </li>
+                    <li class="cardList pointer" onclick="python()"> 
+                        <img src="image/python.png" alt="Python Icon">
+                        <button class="pointer"> Python </button>
+                    </li>
+                    <li class="cardList pointer" onclick="rubyAndSinatra()"> 
+                        <img src="image/ruby.png" alt="Ruby Icon">
+                        <button class="pointer"> Ruby </button>
+                    </li>
+                </ul>
+            </section>
+            <section id="webFramework">
+                <h1> أطر العمل لإلنشاء مواقع الإنترنت </h1>
+                <ul>
+                    <li class="cardList">
+                        <img src="image/flask.png" alt="Flask Icon">
+                        <button> Flask </button>
+                    </li>
+                    <li class="cardList pointer" onclick="django()"> 
+                        <img src="image/django.png" alt="Django Icon">
+                        <button class="pointer"> Django </button>
+                    </li>
+                    <li class="cardList pointer" onclick="rubyAndSinatra()"> 
+                        <img src="image/sinatra.png" alt="Sinatra Icon">
+                        <button class="pointer"> Sinatra </button>
+                    </li>
+                </ul>
+            </section>
+            <section id="DesktopFramework">
+                <h1> أطر العمل لإلنشاء برامج الحاسب </h1>
+                <ul>
+                    <li class="cardList">
+                        <img src="image/java.png" alt="Java Icon">
+                        <button> Java FX </button>
+                    </li>
+                </ul>
+            </section>
+            <section id="webLanguage">
+                <h1> اللغات الخاصة بتطوير صفحات الإنترنت </h1>
+                <ul>
+                    <li class="cardList pointer" onclick="html5()">
+                        <img src="image/html5.png" alt="Html Icon">
+                        <button class="pointer"> Html </button>
+                    </li>
+                    <li class="cardList pointer" onclick="css3()">
+                        <img src="image/css3.png" alt="Css Icon">
+                        <button class="pointer"> Css </button>
+                    </li>
+                    <li class="cardList pointer" onclick="javascript()">
+                        <img src="image/javascript.png" alt="Javascript Icon">
+                        <button class="pointer"> Javascript </button>
+                    </li>
+                </ul>
+            </section>
+            <section id="webLanguage">
+                <h1> اللغات الخاصة للتعامل مع قواعد البيانات </h1>
+                <ul>
+                    <li class="cardList pointer" onclick="sql()">
+                        <img src="image/sql.png" alt="Sql Icon">
+                        <button class="pointer"> Sql </button>
+                    </li>
+                </ul>
+            </section>
+            <section id="passingData">
+                <h1> اللغات الخاصة لتمرير البيانات  </h1>
+                <ul>
+                    <li class="cardList pointer" onclick="json()">
+                        <img src="image/json.png" alt="Json Icon">
+                        <button class="pointer"> Json </button>
+                    </li>
+                </ul>
+            </section>
         </div>
     </div>
-    <div id="leftSide">
-        <section id="information">
-            <h1> عبدالكريم السيف </h1>
-            <p class="largeParagraph"> شخص يطور برامج </p>
-        </section>
-        <section id="programmingLanguage">
-            <h1> لغات البرمجة </h1>
-            <ul>
-                <li class="cardList pointer" onclick="java()">
-                    <img src="image/java.png" alt="Java Icon">
-                    <button class="pointer"> Java </button>
-                </li>
-                <li class="cardList pointer" onclick="c_sharp()"> 
-                    <img src="image/csharp.png" alt="C# Icon">
-                    <button class="pointer"> #C </button>
-                </li>
-                <li class="cardList pointer" onclick="python()"> 
-                    <img src="image/python.png" alt="Python Icon">
-                    <button class="pointer"> Python </button>
-                </li>
-                <li class="cardList pointer" onclick="rubyAndSinatra()"> 
-                    <img src="image/ruby.png" alt="Ruby Icon">
-                    <button class="pointer"> Ruby </button>
-                </li>
-            </ul>
-        </section>
-        <section id="webFramework">
-            <h1> أطر العمل لإلنشاء مواقع الإنترنت </h1>
-            <ul>
-                <li class="cardList">
-                    <img src="image/flask.png" alt="Flask Icon">
-                    <button> Flask </button>
-                </li>
-                <li class="cardList pointer" onclick="django()"> 
-                    <img src="image/django.png" alt="Django Icon">
-                    <button class="pointer"> Django </button>
-                </li>
-                <li class="cardList pointer" onclick="rubyAndSinatra()"> 
-                    <img src="image/sinatra.png" alt="Sinatra Icon">
-                    <button class="pointer"> Sinatra </button>
-                </li>
-            </ul>
-        </section>
-        <section id="DesktopFramework">
-            <h1> أطر العمل لإلنشاء برامج الحاسب </h1>
-            <ul>
-                <li class="cardList">
-                    <img src="image/java.png" alt="Java Icon">
-                    <button> Java FX </button>
-                </li>
-            </ul>
-        </section>
-        <section id="webLanguage">
-            <h1> اللغات الخاصة بتطوير صفحات الإنترنت </h1>
-            <ul>
-                <li class="cardList pointer" onclick="html5()">
-                    <img src="image/html5.png" alt="Html Icon">
-                    <button class="pointer"> Html </button>
-                </li>
-                <li class="cardList pointer" onclick="css3()">
-                    <img src="image/css3.png" alt="Css Icon">
-                    <button class="pointer"> Css </button>
-                </li>
-                <li class="cardList pointer" onclick="javascript()">
-                    <img src="image/javascript.png" alt="Javascript Icon">
-                    <button class="pointer"> Javascript </button>
-                </li>
-            </ul>
-        </section>
-        <section id="webLanguage">
-            <h1> اللغات الخاصة للتعامل مع قواعد البيانات </h1>
-            <ul>
-                <li class="cardList pointer" onclick="sql()">
-                    <img src="image/sql.png" alt="Sql Icon">
-                    <button class="pointer"> Sql </button>
-                </li>
-            </ul>
-        </section>
-        <section id="passingData">
-            <h1> اللغات الخاصة لتمرير البيانات  </h1>
-            <ul>
-                <li class="cardList pointer" onclick="json()">
-                    <img src="image/json.png" alt="Json Icon">
-                    <button class="pointer"> Json </button>
-                </li>
-            </ul>
-        </section>
-
-        <button id="Satr" onclick="goToSatr()">
-            <img src="image/satr.png" alt="Satr Logo">
-            <span> الصفحة الشخصية على موقع سطر </span>
-        </button>
-    </div>
-
     <script src="js/move.js"></script>
 </body>
 </html>

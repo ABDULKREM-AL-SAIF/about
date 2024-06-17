@@ -10,72 +10,71 @@
 ::-webkit-scrollbar {
     width: 0px;
 }
-#rightSide {
-    position: fixed;
+#container {
+    width: 1000px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#InformationPart {
+    width: 1000px;
+    height: 350px;
+}
+#ProfileImage {
+    text-align: center;
+    width: 200px;
     float: right;
-    height: 100%;
-    width: 60px;
-    top: 0;
-    right: 0;
-    background-color: #3D3D3D;
-    overflow-x: hidden;
 }
-#profileImage {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    height: 60px;
+#ProfileImage img {
+    height: 200px;
+    border-radius: 7px;
 }
-#profileImage img {
-    width: 40px;
-    height: 54px;
-    border-radius: 10px;
+#ProfileInformation {
+    padding-top: 15px;
+    padding-right: 10px;
+    line-height: 35px;
+    width: 800px;
+    float: right;
+    font-size: 18px;
 }
-#developmentPart, #certificatePart {
-    display: block;
-    text-align: center;
-    width: 100%;
-    height: 60px;
-    cursor: pointer;
-}
-#developmentPart button, #certificatePart button {
-    width: 100%;
-    height: 60px;
-    cursor: pointer;
+#Satr {
+    display: inline-block;
+    width: 300px;
+    height: 50px;
     border: 0px;
-    background-color: #3D3D3D;
+    cursor: pointer;
+    margin-top: 25px;
+    text-align: center;
+    background-color: #FFFFFF;
 }
-#developmentPart button:hover, #certificatePart button:hover {
-    background-color: #737373;
-}
-#developmentPart img, #certificatePart img {
-    width: 60px;
-    height: 60px;
-    padding: 15px;
-}
-#leftSide {
+#Satr img {
     float: right;
-    display: grid;
-    margin-right: 50px;
-    padding: 30px 30px 30px 0px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-right: 2px solid #737373;
+    border-bottom: 2px solid #737373;
+    border-top: 2px solid #737373;
+    border-radius: 0px 5px 5px 0px;
 }
-#information {
-    width: 100%;
-    min-height: 300px;
-}
-#information h1 {
-    width: 100%;
-    min-height: 40px;
-    margin-bottom: 20px;
-}
-.largeParagraph {
-    width: 100%;
-    height: 150px;
+#Satr span {
+    float: left;
+    width: 250px;
+    height: 50px;
     font-weight: bold;
+    color: #FFFFFF;
+    background-color: #737373;
+    border: 0px;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 14px;
+    padding: 10px;
 }
+
+#ProgrammingLanguagePart {
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
 #programmingLanguage, #webFramework, #DesktopFramework, #webLanguage, #passingData {
     width: 100%;
 }
@@ -84,7 +83,7 @@
     min-height: 40px;
     margin-bottom: 20px;
 }
-#leftSide ul {
+#programmingLanguage ul, #webFramework ul, #DesktopFramework ul, #webLanguage ul, #passingData ul {
     float: right;
     width: 100%;
     margin-bottom: 25px;
@@ -123,36 +122,4 @@
     border-radius: 5px 0px 0px 5px;
     font-size: x-large;
     letter-spacing: 2px;
-}
-#Satr {
-    display: inline-block;
-    width: 300px;
-    height: 50px;
-    border: 0px;
-    cursor: pointer;
-    margin-top: 50px;
-    text-align: center;
-    background-color: #FFFFFF;
-}
-#Satr img {
-    float: right;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    border-right: 2px solid #737373;
-    border-bottom: 2px solid #737373;
-    border-top: 2px solid #737373;
-    border-radius: 0px 5px 5px 0px;
-}
-#Satr span {
-    float: left;
-    width: 250px;
-    height: 50px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background-color: #737373;
-    border: 0px;
-    border-radius: 5px 0px 0px 5px;
-    font-size: 14px;
-    padding: 10px;
 }
