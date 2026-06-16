@@ -31,7 +31,11 @@
             padding: 40px 20px;
             margin: 0;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
 
         /* Custom Scrollbar for Terminal Theme */
@@ -229,6 +233,22 @@
             transition: color 0.2s;
         }
         a:hover { color: var(--purple); text-decoration: underline; }
+
+        /* Footer styling for Gemini credit */
+        .footer-credit {
+            margin-top: 25px;
+            color: var(--text-muted);
+            font-size: 0.85em;
+            text-align: center;
+            opacity: 0.8;
+            border-top: 1px solid #21262d;
+            padding-top: 15px;
+            width: 100%;
+            max-width: 950px;
+        }
+        .footer-credit span {
+            color: var(--orange);
+        }
     </style>
 </head>
 <body>
@@ -244,7 +264,11 @@
     </div>
 
     <div class="terminal-body" id="terminal-content">
-        </div>
+    </div>
+</div>
+
+<div class="footer-credit">
+    Developed in collaboration with <span>Gemini</span> | تم التطوير بالتعاون مع نموذج <span>جيمناي</span>
 </div>
 
 <script>
