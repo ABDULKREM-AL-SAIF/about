@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abdulkrem@playground:~</title>
+    <style>
+        /* Modern dark color palette and variables */
+        :root {
+            --bg-color: #0d1117;
+            --term-bg: #161b22;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --cyan: #58a6ff;
+            --green: #7ee787;
+            --purple: #bc8cff;
+            --red: #ff7b72;
+            --orange: #ffa657;
+        }
+
+        /* Enable smooth scrolling on the container level */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: monospace;
+            letter-spacing: 1px;
+            padding: 40px 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Custom Scrollbar for Terminal Theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #30363d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+
+        /* Sleek Modern Terminal Window */
+        .terminal-window {
+            width: 100%;
+            max-width: 950px;
+            background-color: var(--term-bg);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        /* Terminal Top Header Bar */
+        .terminal-bar {
+            background-color: #21262d;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #30363d;
+        }
+
+        /* Window Controls */
+        .buttons {
+            display: flex;
+            gap: 8px;
+            margin-right: 20px;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .dot-red { background-color: #ff5f56; }
+        .dot-yellow { background-color: #ffbd2e; }
+        .dot-green { background-color: #27c93f; }
+
+        .title {
+            color: var(--text-muted);
+            font-size: 0.85em;
+            margin: 0 auto;
+            transform: translateX(-30px);
+        }
+
+        /* Main Terminal Content */
+        .terminal-body {
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        .prompt { color: var(--cyan); }
+        .path { color: var(--text-main); }
+
+        .command {
+            color: var(--green);
+            font-weight: bold;
+            letter-spacing: 1.2px;
+        }
+
+        /* Profile Section (Neofetch style) */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 30px;
+            margin: 20px 0 20px 0;
+        }
+
+        @media (max-width: 600px) {
+            .profile-grid { grid-template-columns: 1fr; }
+            .ascii-art { display: none; }
+        }
+
+        .ascii-art {
+            color: var(--purple);
+            font-weight: bold;
+            white-space: pre;
+            font-size: 0.95em;
+            line-height: 1.2;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .info-item { margin-bottom: 8px; }
+        .info-label { color: var(--purple); font-weight: bold; }
+
+        /* Sections and Cards Content */
+        .section-container {
+            margin: 20px 0 20px 15px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .card {
+            background: #1f242c;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 15px;
+            line-height: 1.5;
+        }
+
+        .card-title {
+            color: var(--cyan);
+            font-weight: bold;
+            margin-top: 0;
+            border-bottom: 1px dashed #30363d;
+            padding-bottom: 5px;
+        }
+
+        .card-subtitle {
+            color: var(--orange);
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        .card-date {
+            color: var(--text-muted);
+            font-size: 0.85em;
+            margin-bottom: 10px;
+        }
+
+        .card-list {
+            padding-left: 20px;
+            margin: 10px 0 0 0;
+        }
+
+        .card-list li {
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+
+        .tools-used {
+            color: var(--green);
+            font-size: 0.9em;
+            margin-top: 10px;
+            border-top: 1px dashed #30363d;
+            padding-top: 8px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.9em;
+        }
+
+        /* Smooth Blinking Cursor */
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background-color: var(--green);
+            vertical-align: middle;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            50% { background-color: transparent; }
+        }
+
+        a {
+            color: var(--cyan);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover { color: var(--purple); text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<div class="terminal-window">
+    <div class="terminal-bar">
+        <div class="buttons">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+        </div>
+        <div class="title">abdulkrem@playground:~</div>
+    </div>
+
+    <div class="terminal-body" id="terminal-content">
+        </div>
+</div>
+
+<script>
+    // CV Content parsed as steps for Sequential Typing Effect
+    const terminalSteps = [
+        { type: 'command', text: 'neofetch --profile' },
+        { type: 'output', html: `
+            <div class="profile-grid">
+                <div class="ascii-art">  /\\_/\\ \n ( o.o )\n  > ^ < \n /  | |  \\ \n(  /_/_\\  )</div>
+                <div>
+                    <ul class="info-list">
+                        <li class="info-item"><span class="info-label">Name:</span> Abdulkrem Al Shammari (Al-Saif)</li>
+                        <li class="info-item"><span class="info-label">Role:</span> Junior Data Scientist</li>
+                        <li class="info-item"><span class="info-label">Location:</span> Riyadh, Saudi Arabia</li>
+                        <li class="info-item"><span class="info-label">Bio:</span> I am a Junior Data Scientist with a solid foundation in Computer Science, specializing in transforming raw data into actionable insights through Data Storytelling and Visualization.</li>
+                    </ul>
+                </div>
+            </div>`
+        },
+        { type: 'command', text: 'cat work_experience.json' },
+        { type: 'output', html: `
+            <div class="section-container grid-layout">
+                <div class="card">
+                    <div class="card-title">Desktop Support</div>
+                    <div class="card-subtitle">AL-HAYAT National Hospitals Group</div>
+                    <div class="card-date">05/2025 - Present | Riyadh, Saudi Arabia</div>
+                    <ul class="card-list">
+                        <li>Formatted devices</li>
+                        <li>Software installation</li>
+                        <li>Connecting printers & computers to the domain</li>
+                        <li>Bug fixing</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-title">Web Developer - COOP</div>
+                    <div class="card-subtitle">FABLAB Hail</div>
+                    <div class="card-date">09/2020 - 11/2020 | Ha'il, Saudi Arabia</div>
+                    <ul class="card-list">
+                        <li>Database Design Based On Project Needs</li>
+                        <li>Building A User Interface</li>
+                        <li>Linking User Interface To The Database</li>
+                    </ul>
+                </div>
+            </div>`
+        },
+        { type: 'command', text: 'ls projects/' },
+        { type: 'output', html: `
+            <div class="section-container grid-layout">
+                <div class="card">
+                    <div class="card-title">University Ranking Analysis</div>
+                    <p>Analysis of three types of university rankings to recommend the best universities for guidelines.</p>
+                    <div class="tools-used">Tools: Pandas, Plotly</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Saudi Used Cars Prediction</div>
+                    <p>Filtering data to build data storytelling that shifts perspectives on used cars in the Saudi market.</p>
+                    <div class="tools-used">Tools: YData, Sweetviz, Streamlit, Linear Regression</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Football Players Transfer Prediction</div>
+                    <p>Building machine learning models to predict player prices and assign descriptive categories.</p>
+                    <div class="tools-used">Tools: Linear Regression, Logistic Regression</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Analysis Jadarat Jobs</div>
+                    <p>Analyzing data about jobs in Jadarat 2023 and creating engaging storytelling connected through visualization.</p>
+                    <div class="tools-used">Tools: Pandas, YData, Plotly, Streamlit</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">World Happiness Report</div>
+                    <p>Analyzing data regarding the world's happiest countries from 2015 to 2019.</p>
+                    <div class="tools-used">Tools: Pandas, Plotly</div>
+                </div>
+            </div>`
+        },
+        { type: 'command', text: 'cat education.md' },
+        { type: 'output', html: `
+            <div class="section-container grid-layout">
+                <div class="card">
+                    <div class="card-title">Bachelor's in Computer Science</div>
+                    <div class="card-subtitle">Hail University</div>
+                    <div class="card-date">01/2015 - 10/2021 | Ha'il, Saudi Arabia</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Data Science and ML Bootcamp</div>
+                    <div class="card-subtitle">Tuwaiq Academy</div>
+                    <div class="card-date">10/2024 - 11/2024 | Riyadh, Saudi Arabia</div>
+                    <ul class="card-list" style="font-size: 0.85em; color: var(--text-muted); list-style-type: square;">
+                        <li><strong>Analysis Tools:</strong> Numpy, Pandas, YData</li>
+                        <li><strong>Machine Learning:</strong> Classical, Computer Vision, NLP</li>
+                        <li><strong>Visualization:</strong> Matplotlib, Seaborn, Plotly</li>
+                        <li><strong>Data Collecting:</strong> SQL, Web Scraping</li>
+                    </ul>
+                </div>
+            </div>`
+        },
+        { type: 'command', text: 'get --skills' },
+        { type: 'output', html: `
+            <div class="section-container skills-container">
+                <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Data Visualization</span><span class="skill-tag">Data Storytelling</span><span class="skill-tag">Flask Back-End</span>
+                <span class="skill-tag">Front-End</span><span class="skill-tag">Java</span><span class="skill-tag">OOP</span>
+                <span class="skill-tag">Linux OS</span><span class="skill-tag">EDA</span><span class="skill-tag">Data Mining</span><span class="skill-tag">Data Analysis</span>
+            </div>`
+        },
+        { type: 'command', text: 'cat personal_info.yml' },
+        { type: 'output', html: `
+            <div class="section-container grid-layout">
+                <div class="card">
+                    <div class="card-title">Languages</div>
+                    <ul class="card-list">
+                        <li><strong>Arabic:</strong> Full Professional Proficiency</li>
+                        <li><strong>English:</strong> Professional Working Proficiency</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-title">Interests</div>
+                    <ul class="card-list">
+                        <li>CPU Design Development</li>
+                        <li>Continuous Learning</li>
+                    </ul>
+                </div>
+            </div>`
+        },
+        { type: 'command', text: 'cat links.json' },
+        { type: 'output', html: `
+            <div style="margin-left: 15px; margin-bottom: 25px; color: var(--text-muted);">
+                {<br>
+                &nbsp;&nbsp;"github": "<a href='https://github.com/ABDULKREM-AL-SAIF' target='_blank'>github.com/ABDULKREM-AL-SAIF</a>",<br>
+                &nbsp;&nbsp;"linkedin": "<a href='https://www.linkedin.com/in/abdulkremalsaif/' target='_blank'>linkedin.com/in/abdulkremalsaif</a>"<br>
+                }
+            </div>`
+        }
+    ];
+
+    const container = document.getElementById('terminal-content');
+    let stepIndex = 0;
+
+    // Optimized smooth autoscrolling using requestAnimationFrame
+    function scrollToBottom() {
+        requestAnimationFrame(() => {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    function runTerminal() {
+        if (stepIndex >= terminalSteps.length) {
+            const finalLine = document.createElement('p');
+            finalLine.innerHTML = `<span class="prompt">abdulkrem@playground</span>:<span class="path">~</span>$ <span class="cursor"></span>`;
+            container.appendChild(finalLine);
+            scrollToBottom();
+            return;
+        }
+
+        const currentStep = terminalSteps[stepIndex];
+
+        if (currentStep.type === 'command') {
+            const cmdLine = document.createElement('p');
+            cmdLine.innerHTML = `<span class="prompt">abdulkrem@playground</span>:<span class="path">~</span>$ <span class="command" id="cmd-${stepIndex}"></span><span class="cursor" id="cursor-${stepIndex}"></span>`;
+            container.appendChild(cmdLine);
+
+            let charIndex = 0;
+            const cmdText = currentStep.text;
+            const cmdSpan = document.getElementById(`cmd-${stepIndex}`);
+            const cursorSpan = document.getElementById(`cursor-${stepIndex}`);
+
+            const typingInterval = setInterval(() => {
+                cmdSpan.textContent += cmdText[charIndex];
+                charIndex++;
+
+                scrollToBottom();
+
+                if (charIndex >= cmdText.length) {
+                    clearInterval(typingInterval);
+                    cursorSpan.remove();
+                    stepIndex++;
+                    setTimeout(runTerminal, 300);
+                }
+            }, 60);
+
+        } else if (currentStep.type === 'output') {
+            const outputDiv = document.createElement('div');
+            outputDiv.innerHTML = currentStep.html;
+            container.appendChild(outputDiv);
+
+            scrollToBottom();
+
+            stepIndex++;
+            setTimeout(runTerminal, 600);
+        }
+    }
+
+    window.onload = () => {
+        runTerminal();
+    };
+</script>
+
+</body>
+</html>
